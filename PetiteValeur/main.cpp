@@ -6,9 +6,18 @@
 //
 
 #include <iostream>
+#include "PetitesValeurs.hpp"
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    PetitesValeurs petitesValeurs(10);
+    petitesValeurs.ajouter(3);
+    petitesValeurs.ajouter(5);
+    petitesValeurs.ajouter(7);
+    petitesValeurs.ajouter(2);
+//    petitesValeurs.ajouter(12);
+    cout << petitesValeurs << endl;
+    cout << petitesValeurs.valeursSontCorrectes() << endl;
     return EXIT_SUCCESS;
 }
