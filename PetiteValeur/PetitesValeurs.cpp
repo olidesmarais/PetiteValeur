@@ -9,7 +9,8 @@
 
 using namespace std;
 
-int trouver_si(const std::vector<int> valeurs, const std::function<bool(int)>& critere){
+template<typename Conteneur, typename PredicatUnaire>
+int trouver_si(const std::vector<Conteneur> valeurs, const PredicatUnaire& critere){
     int i = 0;
     for(auto&& valeur : valeurs){
         if(critere(valeur))
